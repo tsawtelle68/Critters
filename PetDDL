@@ -1,0 +1,41 @@
+CREATE TABLE [dbo].[Status]
+(
+	[StatusId] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [StatusDescription] NCHAR(30) NOT NULL
+)
+
+CREATE TABLE [dbo].[PetType]
+(
+	[PetTypeId] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [PetTypeName] NCHAR(30) NOT NULL
+)
+
+CREATE TABLE [dbo].[Breed]
+(
+	[BreedId] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [BreedName] NCHAR(30) NOT NULL
+)
+
+CREATE TABLE [dbo].[Pet]
+(
+	[PetId] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [PetTypeId] INT NOT NULL, 
+    [PetName] NCHAR(30) NOT NULL, 
+    [PetAge] FLOAT NOT NULL, 
+    [BreedId] INT NOT NULL, 
+    [Price] MONEY NOT NULL, 
+    [StatusId] INT NOT NULL
+)
+
+INSERT INTO Breed (BreedName) Values ('Canary');
+INSERT INTO Breed (BreedName) Values ('Tabby');
+INSERT INTO Breed (BreedName) Values ('Corgi');
+INSERT INTO Breed (BreedName) Values ('French Bulldog');
+INSERT INTO Breed (BreedName) Values ('Labrador');
+
+INSERT INTO Status (StatusDescription) Values ('Available');
+INSERT INTO Status (StatusDescription) Values ('Sold');
+
+INSERT INTO PetType (PetTypeName) Values ('Dog');
+INSERT INTO PetType (PetTypeName) Values ('Cat');
+INSERT INTO PetType (PetTypeName) Values ('Bird');
