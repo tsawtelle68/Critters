@@ -34,6 +34,7 @@
             this.spacer1MenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myCartMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchForItemsMenuStripItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.menu2Strip = new System.Windows.Forms.MenuStrip();
@@ -53,10 +54,14 @@
             this.userNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.productPanel = new System.Windows.Forms.Panel();
+            this.productListBox = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.menu1Strip.SuspendLayout();
             this.menu2Strip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.loginPanel.SuspendLayout();
+            this.productPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu1Strip
@@ -70,6 +75,7 @@
             this.spacer1MenuStripItem,
             this.loginMenuStripItem,
             this.myCartMenuStripItem,
+            this.accountMenuStripItem,
             this.searchForItemsMenuStripItem});
             this.menu1Strip.Location = new System.Drawing.Point(159, 46);
             this.menu1Strip.Name = "menu1Strip";
@@ -81,6 +87,7 @@
             // logoutMenuStripItem
             // 
             this.logoutMenuStripItem.AutoSize = false;
+            this.logoutMenuStripItem.Enabled = false;
             this.logoutMenuStripItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.logoutMenuStripItem.Name = "logoutMenuStripItem";
             this.logoutMenuStripItem.Size = new System.Drawing.Size(64, 34);
@@ -104,10 +111,20 @@
             // 
             // myCartMenuStripItem
             // 
+            this.myCartMenuStripItem.Enabled = false;
             this.myCartMenuStripItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.myCartMenuStripItem.Name = "myCartMenuStripItem";
             this.myCartMenuStripItem.Size = new System.Drawing.Size(68, 34);
             this.myCartMenuStripItem.Text = "My Cart";
+            // 
+            // accountMenuStripItem
+            // 
+            this.accountMenuStripItem.Enabled = false;
+            this.accountMenuStripItem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.accountMenuStripItem.Name = "accountMenuStripItem";
+            this.accountMenuStripItem.Size = new System.Drawing.Size(93, 34);
+            this.accountMenuStripItem.Text = "My Account";
+            this.accountMenuStripItem.Click += new System.EventHandler(this.accountMenuStripItem_Click);
             // 
             // searchForItemsMenuStripItem
             // 
@@ -207,9 +224,9 @@
             // homePanel
             // 
             this.homePanel.AutoSize = true;
-            this.homePanel.Location = new System.Drawing.Point(723, 87);
+            this.homePanel.Location = new System.Drawing.Point(159, 85);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(348, 289);
+            this.homePanel.Size = new System.Drawing.Size(359, 508);
             this.homePanel.TabIndex = 19;
             // 
             // errorProvider1
@@ -228,7 +245,7 @@
             this.loginPanel.Controls.Add(this.label3);
             this.loginPanel.Location = new System.Drawing.Point(159, 85);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(251, 218);
+            this.loginPanel.Size = new System.Drawing.Size(359, 508);
             this.loginPanel.TabIndex = 21;
             // 
             // label4
@@ -294,16 +311,47 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "User Name:";
             // 
+            // productPanel
+            // 
+            this.productPanel.BackColor = System.Drawing.Color.White;
+            this.productPanel.Controls.Add(this.productListBox);
+            this.productPanel.Controls.Add(this.label5);
+            this.productPanel.Location = new System.Drawing.Point(159, 85);
+            this.productPanel.Name = "productPanel";
+            this.productPanel.Size = new System.Drawing.Size(921, 508);
+            this.productPanel.TabIndex = 23;
+            // 
+            // productListBox
+            // 
+            this.productListBox.FormattingEnabled = true;
+            this.productListBox.ItemHeight = 15;
+            this.productListBox.Location = new System.Drawing.Point(11, 87);
+            this.productListBox.Name = "productListBox";
+            this.productListBox.Size = new System.Drawing.Size(901, 409);
+            this.productListBox.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(3, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(915, 45);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Products (All)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Critters
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 592);
+            this.Controls.Add(this.productPanel);
             this.Controls.Add(this.loginPanel);
-            this.Controls.Add(this.homePanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu1Strip);
             this.Controls.Add(this.menu2Strip);
+            this.Controls.Add(this.homePanel);
             this.IsMdiContainer = true;
             this.Name = "Critters";
             this.Text = "Chloe\'s Cute Critters";
@@ -315,6 +363,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
+            this.productPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,5 +395,9 @@
         private Label label2;
         private Label label3;
         private Label label4;
+        private Panel productPanel;
+        private ToolStripMenuItem accountMenuStripItem;
+        private Label label5;
+        private ListBox productListBox;
     }
 }

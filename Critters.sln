@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.3.32929.385
+VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Critters", "Critters.csproj", "{A8C4EE98-0494-47BC-AD62-01DC6F383944}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{50D8E19F-CD63-4B22-AD37-D6AD20AE81FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{91838712-770D-4318-806C-4E04F83630FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A8C4EE98-0494-47BC-AD62-01DC6F383944}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8C4EE98-0494-47BC-AD62-01DC6F383944}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8C4EE98-0494-47BC-AD62-01DC6F383944}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50D8E19F-CD63-4B22-AD37-D6AD20AE81FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50D8E19F-CD63-4B22-AD37-D6AD20AE81FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50D8E19F-CD63-4B22-AD37-D6AD20AE81FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50D8E19F-CD63-4B22-AD37-D6AD20AE81FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91838712-770D-4318-806C-4E04F83630FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91838712-770D-4318-806C-4E04F83630FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91838712-770D-4318-806C-4E04F83630FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91838712-770D-4318-806C-4E04F83630FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

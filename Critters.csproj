@@ -14,25 +14,21 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="DataAccessLayer\PetStoreDB.mdf" />
-  </ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="DataAccessLayer\**" />
+	  <EmbeddedResource Remove="DataAccessLayer\**" />
+	  <None Remove="DataAccessLayer\**" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Content Include="DataAccessLayer\PetStoreDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Dapper" Version="2.0.123" />
+	  <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+	  <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Dapper" Version="2.0.123" />
-    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="DataAccessLayer\DataAccessLayer.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="DataAccessLayer\DataAccessLayer.csproj" />
+	</ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using Microsoft.Identity.Client;
 
 namespace Critters
 {
+
     public class SecurityLibrary
     {
 
-        public static void ProcessLogin(string username, string password)
-        {
-            string Test = "Text";
-            MessageBox.Show(Test);
-        }
 
     }
 }
